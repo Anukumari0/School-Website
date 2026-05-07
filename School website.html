@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAV School Website</title>
+
+    <style>
+  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f8fc;
+        }
+
+       
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Hover Effect */
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* Home Section */
+        .home {
+            background-color: white;
+        }
+
+        .home img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #eaf2ff;
+        }
+
+        /* Courses Section */
+        .courses {
+            background-color: white;
+        }
+
+        .course-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .course-box {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        /* Hover Effect on Courses */
+        .course-box:hover {
+            transform: scale(1.05);
+            background-color: #084298;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #084298;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #eaf2ff;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .course-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DAV School</h1>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <h2>WELCOME TO DAV SCHOOL</h2>
+        <p>
+            We provide quality education and help students build a bright future.
+        </p>
+
+        <!-- Banner Image -->
+        <img src="haseeb-modi-OcDJhBm8Jnc-unsplash.jpg"
+            alt="School Banner">
+
+        <!-- Interactive Button -->
+        <br>
+        <button onclick="showWelcomeMessage()">
+            Click Me
+        </button>
+    </section>
+
+
+    <section class="about" id="about">
+        <h2>ABOUT OUR SCHOOL</h2>
+
+        <p>
+            DAV School is one of the leading educational institutions focused on
+            academic excellence, discipline, and student development.
+            Our experienced teachers and modern facilities help students
+            achieve their goals.
+        </p>
+    </section>
+
+    <section class="courses" id="courses">
+        <h2>OUR COURSES</h2>
+
+        <div class="course-container">
+
+            <div class="course-box">
+                <h3>UKG-LKG</h3>
+                <p>Play, Learn & Grow Together</p>
+            </div>
+
+            <div class="course-box">
+                <h3>STD I-X</h3>
+                <p>academic excellence With Moral Values</p>
+            </div>
+
+            <div class="course-box">
+                <h3> STD XI-XII</h3>
+                <p>Preparing Learning for Higher Education & Careers</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <textarea id="message" rows="5"
+                placeholder="ENTER YOUR MESSAGE"></textarea>
+
+            <button type="SUBMIT">Send Message</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 DAV School. All Rights Reserved.</p>
+    </footer>
+
+
+    <script>
+
+        function showWelcomeMessage() {
+            alert("WELCOME TO OUR SCHOOL!");
+        }
+
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+            // Prevent form from submitting automatically
+            event.preventDefault();
+
+            // Get form values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            // Email validation pattern
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            // Check empty fields
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            // Check valid email
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Success Message
+            alert("Form submitted successfully!");
+
+            // Reset form after submission
+            document.getElementById("contactForm").reset();
+        });
+
+    </script>
+
+</body>
+</html>
